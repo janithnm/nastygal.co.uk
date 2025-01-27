@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      
+      colors:{
+        "bg-4444":"#444444"
+      }
     },
   },
   plugins: [],

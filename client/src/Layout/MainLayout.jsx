@@ -3,7 +3,7 @@ import Header from "../components/Header/Header"
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="w-full">
         <Header/>
         <Outlet/>
     </div>
