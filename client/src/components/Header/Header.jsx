@@ -5,8 +5,8 @@ import { headerThirdBarContent, MenuItems } from '../../assets/assets';
 
 const Header = () => {
   return (
-    <div className="flex w-full justify-center items-center bg-yellow-400">
-      <div className='w-full flex flex-col justify-center items-center bg-red-400'>
+    <div className="flex w-full justify-center items-center ">
+      <div className='w-full flex flex-col justify-center items-center '>
         {/* top */}
         <div className='container flex justify-between items-center py-4'>
           <div className=' flex justify-start items-center gap-3'>
