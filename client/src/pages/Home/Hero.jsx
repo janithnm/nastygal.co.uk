@@ -1,8 +1,10 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Hero = () => {
 
@@ -21,23 +23,17 @@ const Hero = () => {
             <div className="container h-[600px] bg-red-300 relative">
 
                 <Swiper
-                    spaceBetween={50}
-                    slidesPerView={3}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                >
-                    <SwiperSlide className='w-full'>{({ isActive }) => (
-      <div>Current slide is {isActive ? 'active' : 'not active'}</div>
-    )}Slide 1</SwiperSlide>
-                    <SwiperSlide>{({ isActive }) => (
-      <div>Current slide is {isActive ? 'active' : 'not active'}</div>
-    )}Slide 2</SwiperSlide>
-                    <SwiperSlide>{({ isActive }) => (
-      <div>Current slide is {isActive ? 'active' : 'not active'}</div>
-    )}Slide 3</SwiperSlide>
-                    <SwiperSlide>{({ isActive }) => (
-      <div>Current slide is {isActive ? 'active' : 'not active'}</div>
-    )}Slide 4</SwiperSlide>
+                    modules={[Autoplay]}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    className="mySwiper w-full h-full ">
+                    <SwiperSlide className='w-full h-full flex justify-center items-center'>Slide 1</SwiperSlide>
+                    <SwiperSlide className='w-full h-full flex justify-center items-center'>Slide 2</SwiperSlide>
+                    <SwiperSlide className='w-full h-full flex justify-center items-center'>Slide 3</SwiperSlide>
+                    <SwiperSlide className='w-full h-full flex justify-center items-center'>Slide 4</SwiperSlide>
                 </Swiper>
 
                 <div className="absolute flex justify-between top-[270px] left-0 w-full px-2">

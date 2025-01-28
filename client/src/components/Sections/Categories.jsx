@@ -10,7 +10,7 @@ const Categories = () => {
                         <div key={index} className="flex flex-col gap-2 justify-center items-center ">
                             <div className="w-24 h-24 rounded-full">
                                 <img src={menuItem.image} alt={menuItem.name}
-                                className="cursor-pointer" srcset="" />
+                                className="cursor-pointer" srcSet="" />
                             </div>
                             <p className="cursor-pointer text-black44. font-semibold text-sm">{menuItem.name}</p>
                         </div>
